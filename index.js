@@ -81,7 +81,7 @@ alleData.forEach(singleData => {
       delete singleData[singleQuestion];
     }
   });
-   console.log(singleData);
+  //console.log(singleData);
 });
 // --- Einde cleanen van de vragen ---
 
@@ -89,3 +89,37 @@ alleData.forEach(singleData => {
 let onderwerpNaam = 'huisdier';
 let toLowerCase = data.map(answers => answers[onderwerpNaam].toLowerCase());
 console.log(toLowerCase);
+console.log(toLowerCase.length);
+
+// proberen .toLowerCase in functie te zetten maar deze werkt maar voor 1 value en niet voor allen in de kolom
+
+function deleteUpperCase(string) {
+  let newString = string.toLowerCase();
+  return newString;
+}
+
+let result1 = deleteUpperCase(data[0]['huisdier']);
+//console.log(result1);
+function cleanHuisdier() {
+  let huisdierData = [];
+  toLowerCase.forEach(newData => {
+    if (newData.includes('dachshund')) {
+      newData = 'hond';
+      huisdierData.push(newData);
+    }
+    if (newData.includes('capricornis sumatraensis')) {
+      newData = 'geit';
+      huisdierData.push(newData);
+    }
+    if (newData.includes('hamster')) {
+      newData = 'hamster';
+      huisdierData.push(newData);
+    } else {
+      huisdierData.push(newData);
+    }
+  });
+
+  console.log(huisdierData);
+  console.log(huisdierData.length);
+}
+cleanHuisdier();
