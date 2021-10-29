@@ -1,8 +1,23 @@
 const data = require('./data.json');
+const express = require('express');
+const app = express();
+const port = 1996;
 const removeWhitespace = require('remove-whitespace');
 
+app.set('view engine', 'ejs');
+app.set('views', 'view');
+app.get('/', index);
+
+app.listen(port, server);
+
+function server() {
+  console.log('The server is running succesfully!');
+}
 // console.log(data[1]['Wat is je favoriete soort huisdier?']);
 
+function index(req, res) {
+  res.render('index', { data: huisdierData });
+}
 let alleData = data;
 
 // let lowerCaseData = removeWhitespace(onderwerpNaam);
@@ -93,17 +108,16 @@ let toLowerCase = data.map(answers => answers[onderwerpNaam].toLowerCase());
 
 // proberen .toLowerCase in functie te zetten maar deze werkt maar voor 1 value en niet voor allen in de kolom
 
-function deleteUpperCase(string) {
-  let newString = string.toLowerCase();
-  return newString;
+function deleteCapitals(string) {
+  return string.toLowerCase();
 }
 
 for (let i = 0; i < data.length; i++) {
-  data[i].huisdier = deleteUpperCase(data[i].huisdier);
+  data[i].huisdier = deleteCapitals(data[i].huisdier);
 }
 
 //console.log('VANAF HIER');
-//console.log(data);
+console.log(data);
 
 //console.log(result1);
 let huisdierData = [];
@@ -132,8 +146,19 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.substring(1);
 }
 
-for (let i = 0; i < data.length; i++) {
+for (let i = 0; i < huisdierData.length; i++) {
   huisdierData[i] = capitalizeFirstLetter(huisdierData[i]);
 }
 
 console.log(huisdierData);
+
+// function renderData(data) {
+//   let mainContainer = document.getElementById('myData');
+//   for (let i = 0; i < data.length; i++) {
+//     // huisdierData[i] = capitalizeFirstLetter(huisdierData[i]);
+//     let div = document.createElement('div');
+//     div.innerHTML = data[i].huisdier;
+//     mainContainer.appendChild('div')
+//   }
+// }
+// renderData();

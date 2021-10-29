@@ -1,0 +1,23 @@
+{
+  "name": "functional-programming",
+  "version": "1.0.0",
+  "description": "repo for the first course of the Tech Track of the Information Design project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiara1404/functional-programming.git"
+  },
+  "author": "",
+  "licecnse": "ISC",
+  "bugs": {
+    "url": "https://github.com/kiara1404/functional-programming/issues"
+  },
+  "homepage": "https://github.com/kiara1404/functional-programming#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
