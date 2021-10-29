@@ -88,8 +88,8 @@ alleData.forEach(singleData => {
 // --- Cleanen antwoorden ---
 let onderwerpNaam = 'huisdier';
 let toLowerCase = data.map(answers => answers[onderwerpNaam].toLowerCase());
-console.log(toLowerCase);
-console.log(toLowerCase.length);
+//console.log(toLowerCase);
+//console.log(toLowerCase.length);
 
 // proberen .toLowerCase in functie te zetten maar deze werkt maar voor 1 value en niet voor allen in de kolom
 
@@ -98,20 +98,24 @@ function deleteUpperCase(string) {
   return newString;
 }
 
-let result1 = deleteUpperCase(data[0]['huisdier']);
+for (let i = 0; i < data.length; i++) {
+  data[i].huisdier = deleteUpperCase(data[i].huisdier);
+}
+
+//console.log('VANAF HIER');
+//console.log(data);
+
 //console.log(result1);
+let huisdierData = [];
 function cleanHuisdier() {
-  let huisdierData = [];
   toLowerCase.forEach(newData => {
     if (newData.includes('dachshund')) {
       newData = 'hond';
       huisdierData.push(newData);
-    }
-    if (newData.includes('capricornis sumatraensis')) {
+    } else if (newData.includes('capricornis sumatraensis')) {
       newData = 'geit';
       huisdierData.push(newData);
-    }
-    if (newData.includes('hamster')) {
+    } else if (newData.includes('of')) {
       newData = 'hamster';
       huisdierData.push(newData);
     } else {
@@ -119,7 +123,17 @@ function cleanHuisdier() {
     }
   });
 
-  console.log(huisdierData);
-  console.log(huisdierData.length);
+  // console.log(huisdierData);
+  // console.log(huisdierData.length);
 }
 cleanHuisdier();
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.substring(1);
+}
+
+for (let i = 0; i < data.length; i++) {
+  huisdierData[i] = capitalizeFirstLetter(huisdierData[i]);
+}
+
+console.log(huisdierData);
