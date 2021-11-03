@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/kiara1404/functional-programming#readme",
   "dependencies": {
+    "cross-fetch": "^3.1.4",
     "ejs": "^3.1.6",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node": "^17.0.1",
+    "node-fetch": "^3.0.0"
   }
 }
