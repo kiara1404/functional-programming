@@ -15,7 +15,7 @@ Ik heb alleen snel een server aangemaakt met Express om te kijken of ik de opges
 # **Externe Dataset**
 Nadat er geoefend was met de survey data, hadden we de opdracht gekregen om een externe dataset te zoeken die in jouw eigen interessegebied lag en deze via een API op te halen.
 
-Voor meer informatie hierover, kan je meer lezen in mijn [wiki](https://github.com/kiara1404/functional-programming/wiki).
+Voor meer informatie hierover, kan je meer lezen in mijn [wiki](https://github.com/kiara1404/functional-programming/wiki/Onderwerp).
 # **Installatie**
 Open je terminal en clone de link van mijn repo:
 ```
