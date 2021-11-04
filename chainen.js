@@ -18,6 +18,7 @@ function deleteUpperCase(string) {
     }
 }
 // wanneer er een vraagteken in het antwoord voorkomt
+// overgenomen van voorbeeld code van Robert https://github.com/cmda-tt/course-21-22/blob/main/fp/examples/chaining-cleaning/index.js
 function ifEmptyToZero(string) {
     if (typeof string === 'string') {
         return string.replaceAll('?', '')

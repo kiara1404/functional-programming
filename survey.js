@@ -111,8 +111,6 @@ function cleanHuisdier() {
         }
 
     });
-
-
 }
 cleanHuisdier();
 
