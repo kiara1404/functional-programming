@@ -74,8 +74,9 @@ alleData.forEach(singleData => {
     console.log(singleData);
 });
 
+// wilde deze in een functie zetten
 let toLowerCase = data.map(answers => answers.huisdier.toLowerCase());
-// console.log(toLowerCase);
+
 
 // alles naar lowercase
 function deleteUpperCase(string) {
@@ -83,17 +84,15 @@ function deleteUpperCase(string) {
     return newString;
 }
 
-let result1 = deleteUpperCase(data[0]['huisdier']);
-console.log(result1);
-
 // -- begin for loop --
 for (let i = 0; i < data.length; i++) {
     data[i].huisdier = deleteUpperCase(data[i].huisdier);
 }
 
-console.log('VANAF HIER');
-console.log(data);
+//console.log('VANAF HIER');
+//console.log(data);
 
+//nieuwe lege array om opgeschoonde data in te stoppen
 let huisdierData = [];
 
 function cleanHuisdier() {
@@ -113,8 +112,7 @@ function cleanHuisdier() {
 
     });
 
-    console.log(huisdierData);
-    console.log(huisdierData.length);
+
 }
 cleanHuisdier();
 

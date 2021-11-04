@@ -41,24 +41,24 @@ function capitalizeFirstLetter(string) {
 function cleanHuisdier(data) {
     data.forEach(obj => {
         if (obj['Wat is je favoriete soort huisdier?'].includes('Dachshund')) {
-            obj['Wat is je favoriete soort huisdier?'] = 'hond'
+            obj['Wat is je favoriete soort huisdier?'] = 'Hond'
 
         } else if (obj['Wat is je favoriete soort huisdier?'].includes('Capricornis sumatraensis')) {
-            obj['Wat is je favoriete soort huisdier?'] = 'geit'
+            obj['Wat is je favoriete soort huisdier?'] = 'Geit'
 
         } else if (obj['Wat is je favoriete soort huisdier?'].includes('of')) {
-            obj['Wat is je favoriete soort huisdier?'] = 'hamster';
+            obj['Wat is je favoriete soort huisdier?'] = 'Hamster';
         }
 
 
     })
-    // console.log('hahahaah', data)
+
     return data
 }
 
 parseData()
     .then(data => {
-        //console.log(data)
+
         return data.map(obj => {
             Object.keys(obj).forEach(key => {
                 obj[key] = deleteUpperCase(obj[key])
@@ -70,15 +70,11 @@ parseData()
 
     })
     .then(data => {
-        // console.log(data)
-        // cleanHuisdier(data)
-        // return data
         return cleanHuisdier(data);
-        // return data
 
     })
     .then(cleanData => {
         console.log(cleanData)
-        // console.log(` ${cleanData}`)
-        // console.log(JSON.parse(JSON.stringify(cleanData)))
+    }).catch(err => {
+        console.log(err);
     })
