@@ -10,7 +10,7 @@ Alle studenten van de Tech Track hebben een enquete ingevuld. Hierin werden alle
 De opdracht was om met behulp van JavaScript via Functional Programming principles functies te schrijven die ervoor zorgen dat de data 'clean' werd.
 
 Belangrijk om te weten is dat doordat ik node.js gebruik, alles via de terminal opgehaald wordt. 
-Ik heb alleen snel een server aangemaakt met Express om te kijken of ik de opgeschoonde data via de server kon inladen.
+Ik heb alleen snel een server aangemaakt met Express om te kijken of ik de opgeschoonde data via de server kon inladen. De code hiervoor kan je op mijn [wiki](https://github.com/kiara1404/functional-programming/wiki/Data-in-de-browser-tonen) bekijken
 
 # **Externe Dataset**
 Nadat er geoefend was met de survey data, hadden we de opdracht gekregen om een externe dataset te zoeken die in jouw eigen interessegebied lag en deze via een API op te halen.
